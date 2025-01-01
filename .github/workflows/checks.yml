@@ -13,6 +13,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Check Docker Version
+        run: docker --version
       - name: Checkout
         uses: actions/checkout@v2
       - name: Test
